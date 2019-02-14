@@ -9,20 +9,10 @@ import statsmodels.api as sm
 from scipy import stats
 
 
-housing_Data_Vars = pd.DataFrame(housing_Data,
-                                 columns = ['sale_price',
-                                            'land_sqft',
-                                            'YearBuilt',
-                                            'year_of_sale',
-                                            'NumBldgs',
-                                            'NumFloors']).replace(0, np.nan).dropna()
-
-
+housing_Data_Vars = pd.DataFrame(housing_Data,['sale_price','land_sqft', 'YearBuilt', 'year_of_sale', 'NumBldgs', 'NumFloors']).replace(0, np.nan).dropna()
 
 Y_Var = pd.DataFrame(housing_Data_Vars['sale_price'])
-X_Vars = pd.DataFrame(housing_Data_Vars,
-                      columns = ['NumBldgs',
-                                 'NumFloors'])
+X_Vars = pd.DataFrame(housing_Data_Vars,['NumBldgs', 'NumFloors'])
 
 #Lning the variables to test the relationships between Y & X Vars
 ln_Y_Var = np.log(Y_Var)
