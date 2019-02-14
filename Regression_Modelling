@@ -70,5 +70,6 @@ sm.qqplot(residual,
            line = '45')
 plt.show()
 
+#testing
 
 #print(len(Y_Var), len(X_Vars)) -> Checking the length of each variable. Making sure that dropna() is working
