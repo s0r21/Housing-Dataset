@@ -19,6 +19,9 @@ housing_Data = pd.read_csv('brooklyn_sales_map.csv')
 housing_Data_Vars = pd.DataFrame(housing_Data,
                                  columns = ['sale_price',
                                             'land_sqft',
+                                            'YearBuilt',
+                                            'year_of_sale',
+                                            'NumBldgs',
                                             'NumFloors']).replace(0, np.nan).dropna()
 
 
