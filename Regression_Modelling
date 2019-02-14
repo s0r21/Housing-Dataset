@@ -8,13 +8,6 @@ import statsmodels.formula.api as smf
 import statsmodels.api as sm
 from scipy import stats
 
-# Importing the dataset
-housing_Data = pd.read_csv('brooklyn_sales_map.csv')
-
-#column_Name = housing_Data.columns.tolist() # -> Seeing the column names
-
-#print(np.transpose(column_Name)) -> #printing the column names
-
 
 housing_Data_Vars = pd.DataFrame(housing_Data,
                                  columns = ['sale_price',
