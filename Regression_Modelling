@@ -34,8 +34,9 @@ ln_X_Var = np.log(X_Vars)
 ln_Y_Var.dropna()
 ln_X_Var.dropna()
 
-
+#Checking the length of each variable. Making sure that dropna() is working
 print(len(ln_X_Var), len(ln_Y_Var))
+
 
 #Using Sklearn for regression
 X_train, X_test, Y_train, Y_test = train_test_split(ln_Y_Var,
@@ -66,6 +67,3 @@ sns.distplot(residual)
 sm.qqplot(residual,
            line = '45')
 plt.show()
-
-
-#print(len(Y_Var), len(X_Vars)) -> Checking the length of each variable. Making sure that dropna() is working
